@@ -38,7 +38,7 @@ http://d-nb.info/standards/elementset/gnd#preferredNameForTheCorporateBody
 
 Lösung: Benutze die GND Ontology als datasource:
 
-http://b-app-zdb.sbb.spk-berlin.de/dev1/ldf/#datasources=http%3A%2F%2F10.100.20.57%3A5000%2Fzdb;http%3A%2F%2F10.100.20.57%3A5000%2Fgnd;http%3A%2F%2F10.100.20.57%3A5000%2Fgndont&query=SELECT%20DISTINCT%20*%20WHERE%20{%0A%20%20%3Fs%20dct%3Acontributor%20%3Fgnd_id%20.%0A%20%20%3Fprop%20rdfs%3AsubPropertyOf%20gndo%3ApreferredName%20.%20%23%20Alle%20props%20die%20Subproperties%20sind%0A%20%20%3Fgnd_id%20gndo%3ApreferredNameForTheCorporateBody%20%3Fname%20.%20%23%20wird%20hier%20eingef%C3%BCgt%0A%20%20%3Fgnd_id%20rdf%3Atype%20%3Ftype%20.%20%23%20Klasse%20der%20Ressource%0A}%0ALIMIT%20100
+http://b-app-zdb.sbb.spk-berlin.de/dev1/ldf/#datasources=http%3A%2F%2F10.100.20.57%3A5000%2Fzdb;http%3A%2F%2F10.100.20.57%3A5000%2Fgnd;http%3A%2F%2F10.100.20.57%3A5000%2Fgndont&query=SELECT%20DISTINCT%20*%20WHERE%20{%0A%20%20%3Fs%20dct%3Acontributor%20%3Fgnd_id%20.%0A%20%20OPTIONAL%20{%0A%20%20%20%20%3Fprop%20rdfs%3AsubPropertyOf%20gndo%3ApreferredName%20.%20%23%20Alle%20props%20die%20Subproperties%20sind%0A%20%20%20%20%3Fgnd_id%20gndo%3ApreferredNameForTheCorporateBody%20%3Fname%20.%20%23%20wird%20hier%20eingef%C3%BCgt%0A%20%20%20%20%3Fgnd_id%20rdf%3Atype%20%3Ftype%20.%20%23%20Klasse%20der%20Ressource%0A%20%20}%0A}%0ALIMIT%20100
 
 
 
